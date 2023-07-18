@@ -1,0 +1,23 @@
+body{
+background-image: url('BGImage.jpg');    
+background-repeat: no-repeat;
+background-size: cover;
+display: flex;
+align-items: center;
+justify-content: center;
+min-height: 100vh;
+}
+
+.clock{
+    font-size: 4rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0px 0px 0px 1px rgba(1,0,0,0.2);
+    height: 275px;
+    width: 750px;
+}
+
+#time{
+    margin: 20px;
+}
