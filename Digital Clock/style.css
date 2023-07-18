@@ -3,6 +3,7 @@ background-image: url('BGImage.jpg');
 background-repeat: no-repeat;
 background-size: cover;
 display: flex;
+flex-direction: column;
 align-items: center;
 justify-content: center;
 min-height: 100vh;
@@ -16,8 +17,19 @@ min-height: 100vh;
     box-shadow: 0px 0px 0px 1px rgba(1,0,0,0.2);
     height: 275px;
     width: 750px;
+    font-family: 'Orbitron', sans-serif;
+    color: white;
+    box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.1),
+    0px 10px 20px rgba(0, 0, 0, 0.7);
+    border-radius: 20px;
 }
 
 #time{
     margin: 20px;
+}
+
+
+.heading{
+    font-family: 'Orbitron', sans-serif;
+    color: whitesmoke;
 }
