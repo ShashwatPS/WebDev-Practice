@@ -2,7 +2,7 @@
 This project is a simple digital clock implemented using HTML, CSS, and JavaScript. It displays the current time and updates dynamically every second.
 
 # Preview
-![Digital Clock Preview](./Preview.jpg)
+![Screenshot 2023-07-19 003310](https://github.com/ShashwatPS/WebDev-Practice/assets/114943221/6c9196b1-e2cb-4cab-a93c-c1162155f0d5)
 
 # How It Works
 The digital clock retrieves the current time using JavaScript's Date object. It then formats the time into hours, minutes, and seconds, accounting for the 12-hour format and the AM/PM time indicator.
