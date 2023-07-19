@@ -3,8 +3,7 @@
 This is a simple web application that generates random memes using the [Meme API](https://meme-api.com/gimme). Each time you click the "Generate Meme" button, a new meme will be fetched from the API and displayed on the page.
 
 ## Preview
-
-
+![Preview](https://github.com/ShashwatPS/WebDev-Practice/assets/114943221/eae3d5b6-1805-4647-b0f8-09ec0e21a717)
 
 ## Getting Started
 
@@ -20,9 +19,9 @@ Step-by-step guide on how to install and set up the project:
 
 1. Clone the repository:
 
-   ```shell
-   git clone https://github.com/your-username/meme-generator.git
-   ```
+```shell
+git clone https://github.com/your-username/meme-generator.git
+```
 2. Open the project directory:
 
 ```shell
