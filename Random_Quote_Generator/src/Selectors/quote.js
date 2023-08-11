@@ -1,7 +1,7 @@
 import {quoteState} from "../atoms/quotegen.js";
 
-export const setquoteState = ({
-    key: 'setquoteState',
+export const setquote = ({
+    key: 'set-quote',
     get: ({get}) => {
         const state = get(quoteState);
         return state.content;
