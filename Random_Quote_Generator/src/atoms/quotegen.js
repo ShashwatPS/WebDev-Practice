@@ -9,5 +9,5 @@ export const quoteState = atom({
         authorSlug: null,
         length: 0,
         tags: [],
-    }
-})
+    },
+});

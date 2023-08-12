@@ -1,14 +1,14 @@
 import {useRecoilState, useRecoilValue} from "recoil";
-import {setquote} from "./Selectors/quote.js";
-import {setauthorState} from "./Selectors/author.js";
+import {quoteDetails} from "./Selectors/quote.js";
+import {authorDetails} from "./Selectors/author.js";
 import {quoteState} from "./atoms/quotegen.js";
 import {useEffect} from "react";
 import axios from "axios";
 
 function LandingPage(){
-    const setData = useRecoilValue(quoteState);
-    const quote = useRecoilState(setquote);
-    const author = useRecoilState(setauthorState);
+    const [Data,setData] = useRecoilState(quoteState);
+    const quote = useRecoilValue(quoteDetails);
+    const author = useRecoilValue(authorDetails);
 
     useEffect(()=>{
         axios.get("https://api.quotable.io/quotes/random",{
