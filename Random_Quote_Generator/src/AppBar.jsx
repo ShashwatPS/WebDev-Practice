@@ -7,12 +7,16 @@ function StyleBar(){
             <Box sx={{ flexGrow: 1 }}>
                 <AppBar position="static" sx={{
                     bgcolor: "red",
+                    height: "30px",
                 }} >
-                    <Toolbar>
-                        <Typography variant="h7" component="div" sx={{ flexGrow: 1 }}>
+                        <div style={{
+                            paddingTop: 5,
+                            paddingLeft: 5
+                        }}>
+                        <Typography variant="h7">
                             QUOTE GENERATOR
                         </Typography>
-                    </Toolbar>
+                        </div>
                 </AppBar>
             </Box>
         </div>
