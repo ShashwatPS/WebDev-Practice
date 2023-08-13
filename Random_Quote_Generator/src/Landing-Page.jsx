@@ -11,7 +11,7 @@ function LandingPage(){
     const author = useRecoilValue(authorDetails);
 
     useEffect(()=>{
-        axios.get("https://api.quotable.io/quotes/random",{
+        axios.get("https://api.quotable.io/random",{
         }).then(res=>{
             setData(res.data);
         }).catch(error => {
@@ -20,7 +20,7 @@ function LandingPage(){
     },[])
 
     const handleCreateQuote = () => {
-        axios.get("https://api.quotable.io/quotes/random")
+        axios.get("https://api.quotable.io/random")
             .then(res => {
                 setData(res.data);
             })
