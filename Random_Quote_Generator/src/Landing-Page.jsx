@@ -4,7 +4,8 @@ import {authorDetails} from "./Selectors/author.js";
 import {quoteState} from "./atoms/quotegen.js";
 import {useEffect} from "react";
 import axios from "axios";
-import {Button} from "@mui/material";
+import {AppBar, Button, Grid, Typography} from "@mui/material";
+import './App.css'
 function LandingPage(){
     const [Data,setData] = useRecoilState(quoteState);
     const quote = useRecoilValue(quoteDetails);
@@ -31,9 +32,22 @@ function LandingPage(){
 
     return(
         <div>
-            {quote}
-            {author}
-            <Button onClick={handleCreateQuote}>Create Quote</Button>
+            <Grid lg={12}item container>
+            <Grid item lg={7}>
+            <div className={"data"}>
+                <Typography>{quote}</Typography>
+                <Typography>- {author}</Typography>
+            </div>
+            </Grid>
+            <Grid lg={5} item>
+            <div className={"button"}>
+            <Button sx={{
+                color: "orange",
+                bgcolor: "yellow",
+            }} variant={"outlined"} size={"small"} onClick={handleCreateQuote}>Create Quote</Button>
+            </div>
+            </Grid>
+            </Grid>
         </div>
     )
 }

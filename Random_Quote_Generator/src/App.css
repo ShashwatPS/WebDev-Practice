@@ -1,0 +1,14 @@
+.data{
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    text-align: center;
+    padding-top: 400px;
+}
+
+.button{
+    display: flex;
+    text-align: center;
+    padding-top: 400px;
+    padding-left: 230px;
+}
