@@ -32,13 +32,11 @@ function LandingPage(){
 
     return(
         <div className={"data"}>
-            <div>
-                <Card variant="outlined">
+            <div className={"card"}>
                     <Typography>{quote}</Typography>
                     <Typography>- {author}</Typography>
-                </Card>
             </div>
-            <div>
+            <div className={"button"}>
             <Button sx={{
                 color: "orange",
                 bgcolor: "yellow",

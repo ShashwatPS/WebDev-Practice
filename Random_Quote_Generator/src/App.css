@@ -1,7 +1,24 @@
 .data{
     display: flex;
     flex-direction: column;
+    height: 100vh;
     text-align: center;
+    align-items: center;
+    padding-top: 260px;
 }
 
+.card{
+    padding-top: 20px;
+    width: 750px;
+    height: 100px;
+    background-color: rgba(0,0,0,0.1);
+    border-radius: 15px;
+    color: white;
+    padding-left: 5px;
+    padding-right: 5px;
+}
+
+.button{
+    padding-top: 30px;
+}
 
