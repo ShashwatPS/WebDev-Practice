@@ -40,7 +40,11 @@ function LandingPage(){
             <Button sx={{
                 color: "orange",
                 bgcolor: "yellow",
-            }} variant={"outlined"} size={"small"} onClick={handleCreateQuote}>Create Quote</Button>
+                "&:hover": {
+                    bgcolor: "yellow",
+                },
+                borderRadius: "10px",
+            }} variant={"contained"} size={"small"} onClick={handleCreateQuote}>Create Quote</Button>
             </div>
         </div>
     )
