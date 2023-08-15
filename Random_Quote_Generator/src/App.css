@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Exo+2:ital,wght@1,300&display=swap');
+
 .data{
     display: flex;
     flex-direction: column;
@@ -7,7 +9,7 @@
 }
 
 .card{
-    padding-top: 20px;
+    padding-top: 30px;
     width: 750px;
     height: 130px;
     background-color: rgb(255,222,173,0.2);
@@ -16,13 +18,22 @@
     padding-left: 5px;
     padding-right: 5px;
     text-align: center;
+    padding-bottom: 1px;
 }
 
 .button{
     padding-top: 30px;
 }
 
-.text{
+.text1{
     font-size: 30px;
+    margin-bottom: 10px;
 }
 
+.text2{
+    font-size: 25px;
+}
+
+.appBar{
+    font-family: 'Exo 2', sans-serif;
+}

@@ -21,7 +21,7 @@ function LandingPage(){
     },[])
 
     const handleCreateQuote = () => {
-        axios.get("https://api.quotable.io/random")
+        axios.get("https://api.quotable.io/random?maxLength=40")
             .then(res => {
                 setData(res.data);
             })
@@ -33,8 +33,8 @@ function LandingPage(){
     return(
         <div className={"data"}>
             <div className={"card"}>
-                    <div className={"text"}>❝ {quote} ❞ </div>
-                    <div className={"text"}>- {author}</div>
+                    <div className={"text1"}>❝ {quote} ❞ </div>
+                    <div className={"text2"}>- {author}</div>
             </div>
             <div className={"button"}>
             <Button sx={{

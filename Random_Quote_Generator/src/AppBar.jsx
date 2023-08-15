@@ -5,7 +5,7 @@ function StyleBar(){
     return(
         <div>
             <Box sx={{ flexGrow: 1 }}>
-                <AppBar position="static" sx={{
+                <AppBar className={"appBar"} position="static" sx={{
                     bgcolor: "#FF6347",
                     height: "30px",
                 }} >
