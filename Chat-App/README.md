@@ -11,10 +11,9 @@ This repository contains a simple chat application built using the popular Node.
 ## Installation and Usage
 
 1. Clone the repository:
-
-   ```bash
-   git clone https://github.com/your-username/socketio-chat-app.git
-   ```
+```bash
+git clone https://github.com/your-username/socketio-chat-app.git
+ ```
 
 2. Navigate to the project directory:
 ```bash

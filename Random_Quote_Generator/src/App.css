@@ -1,10 +1,9 @@
 .data{
     display: flex;
     flex-direction: column;
-    height: 96vh;
-    text-align: center;
+    height: 97vh;
+    justify-content: center;
     align-items: center;
-    padding-top: 260px;
 }
 
 .card{
@@ -16,9 +15,14 @@
     color: white;
     padding-left: 5px;
     padding-right: 5px;
+    text-align: center;
 }
 
 .button{
     padding-top: 30px;
+}
+
+.text{
+    font-size: 30px;
 }
 
