@@ -33,8 +33,8 @@ function LandingPage(){
     return(
         <div className={"data"}>
             <div className={"card"}>
-                    <Typography className={"text"}>❝ {quote} ❞</Typography>
-                    <Typography className={"text"}>- {author}</Typography>
+                    <div className={"text"}>❝ {quote} ❞ </div>
+                    <div className={"text"}>- {author}</div>
             </div>
             <div className={"button"}>
             <Button sx={{
