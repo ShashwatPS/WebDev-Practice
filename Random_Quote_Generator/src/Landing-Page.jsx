@@ -12,7 +12,7 @@ function LandingPage(){
     const author = useRecoilValue(authorDetails);
 
     useEffect(()=>{
-        axios.get("https://api.quotable.io/random",{
+        axios.get("https://api.quotable.io/random?maxLength=40",{
         }).then(res=>{
             setData(res.data);
         }).catch(error => {
