@@ -38,6 +38,12 @@ app.post('/signup', async (req,res)=>{
     }
 })
 
+app.get("/me", authenticatejwt, (req,res)=>{
+    res.json({
+        username: req.user.username;
+    })
+})
+
 app.get("/login", async(req,res)=>{
     const {username, password} = req.headers;
     const admin = await Admin.findOne({username,password});
