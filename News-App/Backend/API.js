@@ -1,10 +1,10 @@
-const express = require("express");
-const bodyParser = require("body-parser");
+import mongoose from "mongoose";
+import cors from "cors";
+import { SECRET } from "./middleware/auth.js";
+import { sign } from "jsonwebtoken";
+import express from "express";
+import bodyParser from "body-parser";
 const app = express();
-const mongoose = require("mongoose");
-const cors = require("cors");
-const {SECRET} = require("./middleware/auth.js");
-const {sign} = require("jsonwebtoken");
 
 app.use(bodyParser.json());
 app.use(cors());
@@ -17,7 +17,10 @@ const adminSchema = mongoose.Schema({
 
 const Admin = mongoose.model("Admin", adminSchema);
 
-
+mongoose.connect("mongodb+srv://ShashwatPS:s@cluster0.1alkv6j.mongodb.net/News", {
+    useNewUrlParser: true,
+    useUnifiedTopology: true,
+});
 
 app.post('/signup', async (req,res)=>{
     const {username,password} = req.body;
@@ -30,7 +33,9 @@ app.post('/signup', async (req,res)=>{
         const newAdmin = new Admin(obj);
         await newAdmin.save();
 
-        const token = sign({username, role:'admin'}, SECRET, {expires_in: '1h'});
+        const token = sign({username, role:'admin'}, SECRET, {expiresIn: '1h'});
         res.json({message: 'Admin created successfully', token});
     }
 })
+
+app.listen(3000);
