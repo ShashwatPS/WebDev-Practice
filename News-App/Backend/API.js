@@ -40,7 +40,7 @@ app.post('/signup', async (req,res)=>{
 
 app.get("/me", authenticatejwt, (req,res)=>{
     res.json({
-        username: req.user.username;
+        username: req.user.username,
     })
 })
 
