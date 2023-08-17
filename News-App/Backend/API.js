@@ -13,3 +13,7 @@ const adminSchema = mongoose.Schema({
     password: String,
 });
 
+app.post('/signup', (req,res)=>{
+    const {username,password} = req.body;
+    
+})
