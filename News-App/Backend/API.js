@@ -8,6 +8,8 @@ app.use(bodyParser.json());
 app.use(cors());
 
 
-const Data = mongoose.Schema({
+const adminSchema = mongoose.Schema({
+    username: String,
+    password: String,
+});
 
-})
