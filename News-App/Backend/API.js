@@ -1,6 +1,6 @@
 import mongoose from "mongoose";
 import cors from "cors";
-import { SECRET } from "./middleware/auth.js";
+import {authenticatejwt, SECRET} from "./middleware/auth.js";
 import express from "express";
 import bodyParser from "body-parser";
 import jwt from "jsonwebtoken";
@@ -35,6 +35,17 @@ app.post('/signup', async (req,res)=>{
 
         const token = jwt.sign({username, role:'admin'}, SECRET, {expiresIn: '1h'});
         res.json({message: 'Admin created successfully', token});
+    }
+})
+
+app.get("/login", async(req,res)=>{
+    const {username, password} = req.headers;
+    const admin = await Admin.findOne({username,password});
+    if(admin){
+        const token = jwt.sign({username, role: 'admin'},SECRET, {expiresIn: '1h'});
+        res.json({message: 'Logged in Successfully', token});
+    }else{
+        res.status(403).json({message: 'Invalid Username and Password'});
     }
 })
 
