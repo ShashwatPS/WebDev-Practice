@@ -1,7 +1,7 @@
-const jwt = require("jsonwebtoken");
-const SECRET = 'SEcr3t';
+import jwt from "jsonwebtoken";
+export const SECRET = 'SEcr3t';
 
-const authenticatejwt = (req,res,next) =>{
+export const authenticatejwt = (req,res,next) =>{
     const authHeader = req.headers.authorization;
     if(authHeader){
         const token = authHeader.split(' ')[1];
@@ -17,7 +17,3 @@ const authenticatejwt = (req,res,next) =>{
     }
 };
 
-module.exports = {
-    authenticatejwt,
-    SECRET
-}

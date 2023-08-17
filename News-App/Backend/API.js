@@ -1,9 +1,9 @@
 import mongoose from "mongoose";
 import cors from "cors";
 import { SECRET } from "./middleware/auth.js";
-import { sign } from "jsonwebtoken";
 import express from "express";
 import bodyParser from "body-parser";
+import jwt from "jsonwebtoken";
 const app = express();
 
 app.use(bodyParser.json());
@@ -33,7 +33,7 @@ app.post('/signup', async (req,res)=>{
         const newAdmin = new Admin(obj);
         await newAdmin.save();
 
-        const token = sign({username, role:'admin'}, SECRET, {expiresIn: '1h'});
+        const token = jwt.sign({username, role:'admin'}, SECRET, {expiresIn: '1h'});
         res.json({message: 'Admin created successfully', token});
     }
 })
