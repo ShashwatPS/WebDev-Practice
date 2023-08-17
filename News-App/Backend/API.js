@@ -24,7 +24,7 @@ mongoose.connect("mongodb+srv://ShashwatPS:s@cluster0.1alkv6j.mongodb.net/News",
 
 app.post('/signup', async (req,res)=>{
     const {username,password} = req.body;
-    const admin = await Admin.findOne({username});
+    const admin = await Admin.findOne({username,password});
     if(admin){
         res.status(403).json({message: 'Admin already exists'});
     }
@@ -44,7 +44,7 @@ app.get("/me", authenticatejwt, (req,res)=>{
     })
 })
 
-app.get("/login", async(req,res)=>{
+app.post("/login", async(req,res)=>{
     const {username, password} = req.headers;
     const admin = await Admin.findOne({username,password});
     if(admin){

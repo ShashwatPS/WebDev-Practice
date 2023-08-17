@@ -7,7 +7,7 @@ export const authenticatejwt = (req,res,next) =>{
         const token = authHeader.split(' ')[1];
         jwt.verify(token, SECRET, (err,user)=>{
             if(err){
-                return res.sendStatus(403);
+                return res.status(403).json({message: "Invalid Token"});
             }
             req.user = user;
             next();
