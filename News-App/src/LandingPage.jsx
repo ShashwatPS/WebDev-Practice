@@ -1,7 +1,7 @@
 function LandingPage(){
     return(
         <div>
-
+            Hello World
         </div>
     )
 }
