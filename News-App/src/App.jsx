@@ -3,9 +3,11 @@ import LandingPage from "./LandingPage.jsx";
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import StyleBar from "./AppBar.jsx"
 import ShowNews from "./News.jsx";
+import {RecoilRoot} from "recoil";
 function App() {
     return (
-    <>
+        <RecoilRoot>
+            <div>
         <Router>
             <StyleBar></StyleBar>
             <Routes>
@@ -13,7 +15,8 @@ function App() {
                 <Route path={"/news"} element={<ShowNews />} />
             </Routes>
         </Router>
-    </>
+    </div>
+        </RecoilRoot>
   )
 }
 
