@@ -1,9 +1,25 @@
-function AppBar(){
+import {AppBar, Box, Typography} from "@mui/material";
+
+function StyleBar(){
     return(
         <div>
-            Hello World
+            <Box sx={{ flexGrow: 1 }}>
+                <AppBar className={"appBar"} position="static" sx={{
+                    bgcolor: "#FF6347",
+                    height: "30px",
+                }} >
+                    <div style={{
+                        paddingTop: 5,
+                        paddingLeft: 5
+                    }}>
+                        <Typography variant="h7">
+                            NEWS APP
+                        </Typography>
+                    </div>
+                </AppBar>
+            </Box>
         </div>
     )
 }
 
-export default AppBar;
+export default StyleBar;
