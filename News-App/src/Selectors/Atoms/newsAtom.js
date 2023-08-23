@@ -1,7 +1,7 @@
-import atom from "recoil";
+import { atom } from "recoil";
 
 export const newsAtom = atom({
-
+    key: 'newsAtom',
     status: "",
     totalResults: 0,
     articles: [
