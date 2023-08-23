@@ -1,15 +1,16 @@
 import { atom } from "recoil";
 
-export const newsAtom = atom({
+export const newsState = atom({
     key: 'newsAtom',
-    status: "",
+    status: null,
     totalResults: 0,
     articles: [
         {
             source: {
                 id: null,
                 name: "",
-            },  author: "",
+            },
+            author: "",
             title: "",
             description: "",
             url: "",
