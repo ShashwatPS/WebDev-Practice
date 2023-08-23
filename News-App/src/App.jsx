@@ -2,7 +2,7 @@ import './App.css'
 import LandingPage from "./LandingPage.jsx";
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import StyleBar from "./AppBar.jsx"
-import ShowNews from "./News.jsx";
+import ShowNews from "./ShowNews.jsx";
 import {RecoilRoot} from "recoil";
 function App() {
     return (
