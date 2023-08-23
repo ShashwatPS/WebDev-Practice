@@ -9,7 +9,7 @@ function ShowNews() {
     useEffect(() => {
         axios.get("https://newsapi.org/v2/top-headlines?country=us&apiKey=6076b9ab9df84c51af655666324aaa42")
             .then((res) => {
-                setNews(res.data);
+                setNews(res.data.articles);
             })
             .catch((error) => {
                 console.error("Error fetching data:", error);
@@ -18,7 +18,11 @@ function ShowNews() {
 
     return (
         <div>
-            Hello World
+            {
+                news.map((data)=>{
+
+                })
+            }
         </div>
     );
 }
