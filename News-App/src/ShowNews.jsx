@@ -2,6 +2,7 @@ import axios from "axios";
 import {newsState} from "./Selectors/Atoms/newsAtom.js";
 import { useEffect } from "react";
 import {useRecoilState} from "recoil";
+import {ImageList, ImageListItem} from "@mui/material";
 
 function ShowNews() {
     const [news, setNews] = useRecoilState(newsState);
@@ -18,11 +19,13 @@ function ShowNews() {
 
     return (
         <div>
-            {
-                news.map((data)=>{
-
-                })
-            }
+            <ImageList cols={3}>
+                {news.map((item) => (
+                    <ImageListItem key={item.url}>
+                        <img src={item.urlToImage} alt={item.title} />
+                    </ImageListItem>
+                ))}
+            </ImageList>
         </div>
     );
 }
