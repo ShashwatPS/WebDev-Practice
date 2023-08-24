@@ -22,7 +22,12 @@ function ShowNews() {
             <ImageList cols={3}>
                 {news.map((item) => (
                     <ImageListItem key={item.url} onClick={() => {
-                        localStorage.setItem('newsData', JSON.stringify(item));
+                        localStorage.setItem('author', JSON.stringify(item.author));
+                        localStorage.setItem('title', JSON.stringify(item.title));
+                        localStorage.setItem('description', JSON.stringify(item.description));
+                        localStorage.setItem('url', JSON.stringify(item.url));
+                        localStorage.setItem('urlToImage', JSON.stringify(item.urlToImage));
+                        localStorage.setItem('content', JSON.stringify(item.content));
                         window.location = "/newsIn";
                     }}>
                         <img src={item.urlToImage} alt={item.title} />

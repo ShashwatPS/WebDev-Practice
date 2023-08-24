@@ -5,16 +5,22 @@ function NewsIndi() {
         const unloadHandler = () => {
             localStorage.removeItem('newsData');
         };
-
         window.addEventListener('beforeunload', unloadHandler);
         return () => {
-            // window.removeEventListener('beforeunload', unloadHandler);
+            window.removeEventListener('beforeunload', unloadHandler);
         };
     }, []);
 
+    const data = localStorage.getItem('newsData')
+    const data = localStorage.getItem('newsData')
+    const data = localStorage.getItem('newsData')
+    const data = localStorage.getItem('newsData')
+    const data = localStorage.getItem('newsData')
+    const data = localStorage.getItem('newsData')
+
     return (
         <div>
-            Hello, my name is Shashwat Pratap Singh.
+            {console.log(data)}
         </div>
     );
 }
