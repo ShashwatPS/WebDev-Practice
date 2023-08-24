@@ -1,14 +1,22 @@
-import {useRecoilState} from "recoil";
-import {articleState} from "./Selectors/Atoms/articleState.js";
+import React, { useEffect } from 'react';
 
-function NewsIndi(){
-    const [ShowNewsIn] = useRecoilState(articleState);
-    return(
+function NewsIndi() {
+    useEffect(() => {
+        const unloadHandler = () => {
+            localStorage.removeItem('newsData');
+        };
+
+        window.addEventListener('beforeunload', unloadHandler);
+        return () => {
+            // window.removeEventListener('beforeunload', unloadHandler);
+        };
+    }, []);
+
+    return (
         <div>
-            {ShowNewsIn.title}
-            {ShowNewsIn.author}
+            Hello, my name is Shashwat Pratap Singh.
         </div>
-    )
+    );
 }
 
 export default NewsIndi;
