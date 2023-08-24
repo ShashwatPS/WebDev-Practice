@@ -1,14 +1,14 @@
 import {useRecoilState} from "recoil";
-import {newsIn} from "./Selectors/Atoms/newsIn.js";
+import {articleState} from "./Selectors/Atoms/articleState.js";
 
-function IndiNews(){
-    const [ShowNewsIn,SetNewsIn] = useRecoilState(newsIn);
-
+function NewsIndi(){
+    const [ShowNewsIn] = useRecoilState(articleState);
     return(
         <div>
-
+            {ShowNewsIn.title}
+            {ShowNewsIn.author}
         </div>
     )
 }
 
-export default IndiNews;
+export default NewsIndi;
