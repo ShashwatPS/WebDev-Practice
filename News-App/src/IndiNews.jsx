@@ -11,16 +11,21 @@ function NewsIndi() {
         };
     }, []);
 
-    const data = localStorage.getItem('newsData')
-    const data = localStorage.getItem('newsData')
-    const data = localStorage.getItem('newsData')
-    const data = localStorage.getItem('newsData')
-    const data = localStorage.getItem('newsData')
-    const data = localStorage.getItem('newsData')
+    const author = localStorage.getItem('author')
+    const title = localStorage.getItem('title')
+    const description = localStorage.getItem('description')
+    const url = localStorage.getItem('url')
+    const urlToImage = localStorage.getItem('urlToImage')
+    const content = localStorage.getItem('content')
 
     return (
         <div>
-            {console.log(data)}
+            {console.log(author)}
+            {/*{console.log(title)}*/}
+            {/*{console.log(description)}*/}
+            {/*{console.log(url)}*/}
+            {/*{console.log(urlToImage)}*/}
+            {/*{console.log(content)}*/}
         </div>
     );
 }
