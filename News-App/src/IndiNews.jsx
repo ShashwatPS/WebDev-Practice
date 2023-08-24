@@ -20,12 +20,7 @@ function NewsIndi() {
 
     return (
         <div>
-            {console.log(author)}
-            {/*{console.log(title)}*/}
-            {/*{console.log(description)}*/}
-            {/*{console.log(url)}*/}
-            {/*{console.log(urlToImage)}*/}
-            {/*{console.log(content)}*/}
+            <h1>{title}</h1>
         </div>
     );
 }
