@@ -1,5 +1,5 @@
 import {AppBar, Box, Drawer, Typography} from "@mui/material";
-import {useState} from "react";
+import SideNav from "./SideNav.jsx"
 
 function StyleBar(){
     return(
@@ -11,11 +11,14 @@ function StyleBar(){
                 }} >
                     <div style={{
                         paddingTop: 5,
-                        paddingLeft: 5
+                        paddingLeft: 5,
+                        display: "flex",
+                        justifyContent: "space-between",
                     }}>
                         <Typography variant="h7">
                             NEWS APP
                         </Typography>
+                        <SideNav></SideNav>
                     </div>
                 </AppBar>
             </Box>

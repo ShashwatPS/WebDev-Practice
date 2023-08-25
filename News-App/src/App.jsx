@@ -5,13 +5,13 @@ import StyleBar from "./AppBar.jsx"
 import ShowNews from "./ShowNews.jsx";
 import {RecoilRoot} from "recoil";
 import IndiNews from "./IndiNews.jsx";
-import SideNav from "./SideNav.jsx";
+
 function App() {
     return (
         <RecoilRoot>
             <div>
         <Router>
-            <SideNav></SideNav>
+            <StyleBar></StyleBar>
             <Routes>
                 <Route path={"/"} element={<LandingPage />} />
                 <Route path={"/news"} element={<ShowNews />} />
