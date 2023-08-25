@@ -18,6 +18,19 @@ import ScienceOutlinedIcon from '@mui/icons-material/ScienceOutlined';
 import SportsCricketOutlinedIcon from '@mui/icons-material/SportsCricketOutlined';
 import BiotechOutlinedIcon from '@mui/icons-material/BiotechOutlined';
 
+function handleItemClick(index) {
+    var temp= null;
+    if(index===0){temp="business"}
+    else if(index===1){temp="entertainment"}
+    else if(index===2){temp="general"}
+    else if(index===3){temp="health"}
+    else if(index===4){temp="science"}
+    else if(index===5){temp="sports"}
+    else if(index===6){temp="technology"}
+    localStorage.setItem("category",temp);
+    window.location="/"
+}
+
 export default function SwipeableTemporaryDrawer() {
     const [state, setState] = React.useState({
         top: false,
