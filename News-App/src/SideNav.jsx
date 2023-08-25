@@ -11,6 +11,12 @@ import ListItemText from '@mui/material/ListItemText';
 import InboxIcon from '@mui/icons-material/MoveToInbox';
 import MailIcon from '@mui/icons-material/Mail';
 import BusinessIcon from '@mui/icons-material/Business';
+import LiveTvOutlinedIcon from '@mui/icons-material/LiveTvOutlined';
+import SearchOutlinedIcon from '@mui/icons-material/SearchOutlined';
+import HealthAndSafetyOutlinedIcon from '@mui/icons-material/HealthAndSafetyOutlined';
+import ScienceOutlinedIcon from '@mui/icons-material/ScienceOutlined';
+import SportsCricketOutlinedIcon from '@mui/icons-material/SportsCricketOutlined';
+import BiotechOutlinedIcon from '@mui/icons-material/BiotechOutlined';
 
 export default function SwipeableTemporaryDrawer() {
     const [state, setState] = React.useState({
@@ -40,11 +46,17 @@ export default function SwipeableTemporaryDrawer() {
             onKeyDown={toggleDrawer(anchor, false)}
         >
             <List>
-                {['Business', 'Starred', 'Send email', 'Drafts'].map((text, index) => (
+                {['Business', 'Entertainment', 'General', 'Health', 'Science','Sports','Technology'].map((text, index) => (
                     <ListItem key={text} disablePadding>
                         <ListItemButton>
                             <ListItemIcon>
                                 {index === 0 ? <BusinessIcon /> : null}
+                                {index === 1 ? <LiveTvOutlinedIcon  /> : null}
+                                {index === 2 ? <SearchOutlinedIcon /> : null}
+                                {index === 3 ? <HealthAndSafetyOutlinedIcon/> : null}
+                                {index === 4 ? <ScienceOutlinedIcon/> : null}
+                                {index === 5 ? <SportsCricketOutlinedIcon /> : null}
+                                {index === 6 ? <BiotechOutlinedIcon /> : null}
                             </ListItemIcon>
                             <ListItemText primary={text} />
                         </ListItemButton>
