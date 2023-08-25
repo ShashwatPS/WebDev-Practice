@@ -10,13 +10,14 @@ import ListItemIcon from '@mui/material/ListItemIcon';
 import ListItemText from '@mui/material/ListItemText';
 import InboxIcon from '@mui/icons-material/MoveToInbox';
 import MailIcon from '@mui/icons-material/Mail';
+import BusinessIcon from '@mui/icons-material/Business';
 
 export default function SwipeableTemporaryDrawer() {
     const [state, setState] = React.useState({
         top: false,
         left: false,
         bottom: false,
-        right: false,
+        Category: false,
     });
 
     const toggleDrawer = (anchor, open) => (event) => {
@@ -39,11 +40,11 @@ export default function SwipeableTemporaryDrawer() {
             onKeyDown={toggleDrawer(anchor, false)}
         >
             <List>
-                {['Inbox', 'Starred', 'Send email', 'Drafts'].map((text, index) => (
+                {['Business', 'Starred', 'Send email', 'Drafts'].map((text, index) => (
                     <ListItem key={text} disablePadding>
                         <ListItemButton>
                             <ListItemIcon>
-                                {index % 2 === 0 ? <InboxIcon /> : <MailIcon />}
+                                {index === 0 ? <BusinessIcon /> : null}
                             </ListItemIcon>
                             <ListItemText primary={text} />
                         </ListItemButton>
