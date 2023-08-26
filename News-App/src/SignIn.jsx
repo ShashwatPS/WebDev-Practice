@@ -84,10 +84,19 @@ export default function SignIn() {
                             fullWidth
                             variant="contained"
                             sx={{ mt: 3, mb: 2 }}
-                            onClick={()=>{
-                                axios.post("http://localhost:5173/login",{
+                            onClick={async () => {
+                                const res = await axios.post("http://localhost:3000/login", {
+                                    username: email,
+                                    password: password
+                                }, {
+                                    headers: {
+                                        "Content-type": "application/json"
+                                    }
+                                });
+                                const data = res.data;
 
-                                })
+                                localStorage.setItem("token", data.token);
+                                window.location = "/news";
                             }}
                         >
                             Sign In
