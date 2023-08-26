@@ -81,7 +81,11 @@ export default function Signup() {
                             variant="contained"
                             sx={{ mt: 3, mb: 2 }}
                             onClick={async () => {
-                                const res = await axios.post("http://localhost:3000/login",{
+                                const res = await axios.post("http://localhost:3000/signup",{
+                                    body: {
+                                        usrename: email,
+                                        password,
+                                    },
                                     headers: {
                                         "Content-type": "application/json",
                                     }
