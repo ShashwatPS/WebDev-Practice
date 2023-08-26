@@ -56,7 +56,6 @@ export default function SignIn() {
                             required
                             fullWidth
                             label="Email Address"
-                            name="email"
                             autoComplete="email"
                             autoFocus
                             onChange={(e)=>{
@@ -67,7 +66,6 @@ export default function SignIn() {
                             margin="normal"
                             required
                             fullWidth
-                            name="password"
                             label="Password"
                             type="password"
                             autoComplete="current-password"
