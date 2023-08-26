@@ -28,7 +28,7 @@ function Copyright(props) {
 
 const defaultTheme = createTheme();
 
-export default function SignIn() {
+export default function Signup() {
     const [email,setEmail] = useState("");
     const [password,setPassword] = useState("");
 
@@ -48,7 +48,7 @@ export default function SignIn() {
                         <LockOutlinedIcon />
                     </Avatar>
                     <Typography component="h1" variant="h5">
-                        Welcome Back
+                        Welcome
                     </Typography>
                     <Box component="form" noValidate sx={{ mt: 1 }}>
                         <TextField
@@ -84,8 +84,6 @@ export default function SignIn() {
                                 const res = await axios.post("http://localhost:3000/login",{
                                     headers: {
                                         "Content-type": "application/json",
-                                        username: email,
-                                        password: password
                                     }
                                 });
                                 const data = res.data;
@@ -93,7 +91,7 @@ export default function SignIn() {
                                 window.location = "/news";
                             }}
                         >
-                            Sign In
+                            Sign Up
                         </Button>
                         <Grid container>
                             <Grid item style={{

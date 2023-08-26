@@ -36,7 +36,7 @@ export default function SwipeableTemporaryDrawer() {
         top: false,
         left: false,
         bottom: false,
-        Category: false,
+        right: false,
     });
 
     const toggleDrawer = (anchor, open) => (event) => {
