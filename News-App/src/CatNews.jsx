@@ -18,6 +18,16 @@ function CatNews(){
             });
     }, []);
 
+    useEffect(() => {
+        const unloadHandler = () => {
+            localStorage.removeItem('category');
+        };
+        window.addEventListener('beforeunload', unloadHandler);
+        return () => {
+            window.removeEventListener('beforeunload', unloadHandler);
+        };
+    }, []);
+
     return (
         <div>
             <ImageList cols={3}>
