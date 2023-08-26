@@ -6,6 +6,7 @@ import ShowNews from "./ShowNews.jsx";
 import {RecoilRoot} from "recoil";
 import IndiNews from "./IndiNews.jsx";
 import CatNews from "./CatNews.jsx";
+import SignIn from "./SignIn.jsx";
 
 function App() {
     return (
@@ -17,7 +18,8 @@ function App() {
                 <Route path={"/"} element={<LandingPage />} />
                 <Route path={"/news"} element={<ShowNews />} />
                 <Route path={"/newsIn"} element={<IndiNews />} />
-                <Route path={"/newsCat"} element={<CatNews />} />
+                <Route path={"/newsCat"} element={<CatNews />} />\
+                <Route path={"/signin"} element={<SignIn />} />
             </Routes>
         </Router>
     </div>
