@@ -56,7 +56,6 @@ export default function Signup() {
                             required
                             fullWidth
                             label="Email Address"
-                            name="email"
                             autoComplete="email"
                             autoFocus
                             onChange={(e)=>{
@@ -67,7 +66,6 @@ export default function Signup() {
                             margin="normal"
                             required
                             fullWidth
-                            name="password"
                             label="Password"
                             type="password"
                             autoComplete="current-password"
@@ -76,23 +74,28 @@ export default function Signup() {
                             }}
                         />
                         <Button
-                            type="submit"
                             fullWidth
                             variant="contained"
                             sx={{ mt: 3, mb: 2 }}
                             onClick={async () => {
-                                const res = await axios.post("http://localhost:3000/signup",{
-                                    body: {
-                                        usrename: email,
-                                        password,
-                                    },
-                                    headers: {
-                                        "Content-type": "application/json",
-                                    }
-                                });
-                                const data = res.data;
-                                localStorage.setItem("token", data.token);
-                                window.location = "/news";
+                                try {
+                                    const requestData = {
+                                        username: email,
+                                        password: password,
+                                    };
+
+                                    const res = await axios.post("http://localhost:3000/signup", requestData, {
+                                        headers: {
+                                            "Content-Type": "application/json",
+                                        },
+                                    });
+
+                                    const data = res.data;
+                                    localStorage.setItem("token", data.token);
+                                    window.location = "/news";
+                                } catch (error) {
+                                    console.error("Error:", error);
+                                }
                             }}
                         >
                             Sign Up
