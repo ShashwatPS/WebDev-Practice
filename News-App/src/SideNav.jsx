@@ -28,7 +28,7 @@ function handleItemClick(index) {
     else if(index===5){temp="sports"}
     else if(index===6){temp="technology"}
     localStorage.setItem("category",temp);
-    window.location="/"
+    window.location="/newsCat"
 }
 
 export default function SwipeableTemporaryDrawer() {
@@ -60,7 +60,7 @@ export default function SwipeableTemporaryDrawer() {
         >
             <List>
                 {['Business', 'Entertainment', 'General', 'Health', 'Science','Sports','Technology'].map((text, index) => (
-                    <ListItem key={text} disablePadding>
+                    <ListItem key={text} disablePadding onClick={() => handleItemClick(index)}>
                         <ListItemButton>
                             <ListItemIcon>
                                 {index === 0 ? <BusinessIcon /> : null}
