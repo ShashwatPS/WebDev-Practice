@@ -77,17 +77,22 @@ export default function SignIn() {
                             fullWidth
                             variant="contained"
                             sx={{ mt: 3, mb: 2 }}
-                            onClick={async () => {
-                                const res = await axios.post("http://localhost:3000/login",{
-                                    headers: {
-                                        "Content-type": "application/json",
-                                        username: email,
-                                        password: password
-                                    }
-                                });
-                                const data = res.data;
-                                localStorage.setItem("token", data.token);
-                                window.location = "/news";
+                            onClick={ async () => {
+                                try {
+                                    const res = await axios.post("http://localhost:3000/signup",{
+                                        headers: {
+                                            "Content-Type": "application/json",
+                                            "username": email,
+                                            "password": password
+                                        },
+                                    });
+
+                                    const data = res.data;
+                                    localStorage.setItem("token", data.token);
+                                    window.location = "/news";
+                                } catch (error) {
+                                    console.error("Error:", error);
+                                }
                             }}
                         >
                             Sign In
