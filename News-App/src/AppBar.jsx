@@ -8,6 +8,12 @@ function StyleBar(){
     const [userEmail,setEmail]=useState(null);
 
     useEffect(()=>{
+        const config = {
+            headers: {
+                Authorization: `Bearer ${localStorage.getItem("token")}`,
+            },
+        };
+
         axios.get("http://localhost:3000/me").then(response=>{
             setEmail(response.data.username);
         }).catch(error=>{
