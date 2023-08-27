@@ -8,13 +8,11 @@ function StyleBar(){
     const [userEmail,setEmail]=useState(null);
 
     useEffect(()=>{
-        const config = {
+        axios.get("http://localhost:3000/me",{},{
             headers: {
                 Authorization: `Bearer ${localStorage.getItem("token")}`,
-            },
-        };
-
-        axios.get("http://localhost:3000/me").then(response=>{
+            }
+        }).then(response=>{
             setEmail(response.data.username);
         }).catch(error=>{
             console.error("Error fetching data:", error);
