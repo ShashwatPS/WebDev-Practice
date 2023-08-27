@@ -79,14 +79,13 @@ export default function SignIn() {
                             sx={{ mt: 3, mb: 2 }}
                             onClick={ async () => {
                                 try {
-                                    const res = await axios.post("http://localhost:3000/signup",{
+                                    const res = await axios.post("http://localhost:3000/login",{
                                         headers: {
                                             "Content-Type": "application/json",
                                             "username": email,
                                             "password": password
                                         },
                                     });
-
                                     const data = res.data;
                                     localStorage.setItem("token", data.token);
                                     window.location = "/news";
