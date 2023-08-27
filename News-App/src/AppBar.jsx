@@ -8,7 +8,7 @@ function StyleBar(){
     const [userEmail,setEmail]=useState(null);
 
     useEffect(()=>{
-        axios.get("http://localhost:3000/me",{},{
+        axios.get("http://localhost:3000/me",{
             headers: {
                 Authorization: `Bearer ${localStorage.getItem("token")}`,
             }
@@ -36,7 +36,9 @@ function StyleBar(){
                             <Typography variant="h7">
                                 NEWS APP
                             </Typography>
-                            <div>
+                            <div style={{
+                                display: "flex",
+                            }}>
                             <Typography>
                                 {userEmail}
                             </Typography>
