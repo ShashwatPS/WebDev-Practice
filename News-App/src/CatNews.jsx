@@ -9,7 +9,7 @@ function CatNews(){
     const val = localStorage.getItem("category");
 
     useEffect(() => {
-        axios.get(`https://newsapi.org/v2/top-headlines?country=us&category=${val}&apiKey=6076b9ab9df84c51af655666324aaa42`)
+        axios.get(`https://newsapi.org/v2/top-headlines?country=in&category=${val}&apiKey=6076b9ab9df84c51af655666324aaa42`)
             .then((res) => {
                 setNews(res.data.articles);
             })
