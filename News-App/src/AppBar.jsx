@@ -9,7 +9,7 @@ function StyleBar(){
 
     useEffect(()=>{
         axios.get("http://localhost:3000/me").then(response=>{
-            setEmail(response.data);
+            setEmail(response.data.username);
         }).catch(error=>{
             console.error("Error fetching data:", error);
         })
