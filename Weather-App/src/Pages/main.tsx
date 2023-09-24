@@ -55,11 +55,8 @@ function Clock() {
                         headers: {},
                     });
                     const city= response.data[0].name;
-                    console.log(response.data[0].name);
                     const state = response.data[0].state;
-                    console.log(response.data[0].state);
                     const country = response.data[0].country;
-                    console.log(response.data[0].country);
                     setCity(city);
                     setCoun(country);
                     setState(state);
@@ -69,6 +66,20 @@ function Clock() {
             }
 
             fetchData();
+        }, []);
+
+        useEffect(() => {
+            async function Data() {
+                try {
+                    const response = await axios.get(`https://api.openweathermap.org/data/2.5/weather?lat=${Lat}&lon=${Log}&appid=cbbe8041a8910ab49769e58fd0615b16`, {
+                        headers: {},
+                    });
+                    console.log(response);
+                } catch (error) {
+                    console.error('Error fetching data:', error);
+                }
+            }
+            Data();
         }, []);
 
         return (
