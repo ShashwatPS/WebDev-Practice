@@ -54,6 +54,7 @@ export function Navbar() {
         <Box sx={{ flexGrow: 1 }}>
             <AppBar position="static" style={{
                 backgroundColor: "black",
+                borderBottom: "1px solid white",
             }}>
                 <Toolbar>
                     <IconButton
