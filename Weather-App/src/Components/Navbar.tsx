@@ -6,7 +6,6 @@ import Toolbar from '@mui/material/Toolbar';
 import IconButton from '@mui/material/IconButton';
 import Typography from '@mui/material/Typography';
 import InputBase from '@mui/material/InputBase';
-import MenuIcon from '@mui/icons-material/Menu';
 import SearchIcon from '@mui/icons-material/Search';
 
 const Search = styled('div')(({ theme }) => ({
@@ -38,7 +37,6 @@ const StyledInputBase = styled(InputBase)(({ theme }) => ({
     color: 'inherit',
     '& .MuiInputBase-input': {
         padding: theme.spacing(1, 1, 1, 0),
-        // vertical padding + font size from searchIcon
         paddingLeft: `calc(1em + ${theme.spacing(4)})`,
         transition: theme.transitions.create('width'),
         width: '100%',
@@ -54,7 +52,9 @@ const StyledInputBase = styled(InputBase)(({ theme }) => ({
 export function Navbar() {
     return (
         <Box sx={{ flexGrow: 1 }}>
-            <AppBar position="static">
+            <AppBar position="static" style={{
+                backgroundColor: "black",
+            }}>
                 <Toolbar>
                     <IconButton
                         size="large"
@@ -63,7 +63,7 @@ export function Navbar() {
                         aria-label="open drawer"
                         sx={{ mr: 2 }}
                     >
-                        <MenuIcon />
+
                     </IconButton>
                     <Typography
                         variant="h6"
@@ -71,7 +71,7 @@ export function Navbar() {
                         component="div"
                         sx={{ flexGrow: 1, display: { xs: 'none', sm: 'block' } }}
                     >
-                        MUI
+                        Weather-App
                     </Typography>
                     <Search>
                         <SearchIconWrapper>
