@@ -1,7 +1,9 @@
 export function Store(){
     return(
         <div>
-            Hello This is Home
+            <h1>
+                Hello this is store
+            </h1>
         </div>
     )
 }

@@ -1,7 +1,9 @@
 export function Home(){
     return(
         <div>
-            Hello This is Home
+            <h1>
+                Hello this is Home
+            </h1>
         </div>
     )
 }

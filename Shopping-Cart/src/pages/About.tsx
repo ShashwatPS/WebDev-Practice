@@ -1,7 +1,9 @@
 export function About(){
     return(
         <div>
-            Hello This is Home
+            <h1>
+                Hello this is about
+            </h1>
         </div>
     )
 }
