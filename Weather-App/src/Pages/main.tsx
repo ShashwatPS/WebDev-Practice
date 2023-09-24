@@ -28,6 +28,23 @@ function Clock() {
 }
 
     export function LandingPage() {
+    const[Log,setLog]=useState(1);
+    const[Lat,setLat]=useState(1);
+
+
+    useEffect(()=>{
+        if(navigator.geolocation){
+            navigator.geolocation.getCurrentPosition((position)=>{
+                const {latitude, longitude} = position.coords;
+                setLat(latitude);
+                setLog(longitude);
+            })
+        }
+        else{
+            console.log("Geolocation not Supported by your Browser");
+        }
+    },[]);
+
         return (
             <div style={{
                 display: "flex",
